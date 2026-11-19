@@ -1,3 +1,5 @@
+English | [Русский](README.ru.md)
+
 <p align="center">
   <img src="assets/logo.png" alt="Flashscore Lineups Logo" width="180">
 </p>
@@ -23,6 +25,7 @@
 <p align="center">
   <a href="#demo">Demo</a> •
   <a href="#features">Features</a> •
+  <a href="#tech-stack">Tech Stack</a> •
   <a href="#engineering-highlights">Engineering Highlights</a> •
   <a href="#architecture">Architecture</a> •
   <a href="#installation">Installation</a>
@@ -66,6 +69,18 @@ No Selenium, browser automation, or web rendering is involved — all data is co
 * Cross-platform desktop interface built with PyQt5
 
 
+## Tech Stack
+
+- **Python 3.12+** — core application language.
+- **PyQt5** — cross-platform desktop GUI.
+- **requests** — HTTP communication with Flashscore endpoints.
+- **Beautiful Soup 4 / lxml** — HTML parsing and data extraction.
+- **GraphQL** — retrieval of match, lineup, and betting odds data.
+- **pytest** — automated unit and integration testing.
+- **PyInstaller** — standalone executable packaging.
+- **GitHub Actions** — automated testing and Windows builds.
+
+
 ## Engineering Highlights
 
 * Reverse-engineered Flashscore's internal GraphQL endpoints
@@ -79,13 +94,13 @@ No Selenium, browser automation, or web rendering is involved — all data is co
 ## Architecture
 
 ```text
-                        Match URL
+                       Match URL
                            │
                            ▼
                     Match ID Parser
                            │
                            ▼
-                Flashscore GraphQL API
+                 Flashscore GraphQL API
                            │
                 ┌──────────┼──────────┐
                 │                     │
@@ -99,7 +114,7 @@ No Selenium, browser automation, or web rendering is involved — all data is co
                            │
                            ▼
                     Previous Matches
-                        (dlie2 × N)
+                      (dlie2 × N)
                            │
                            ▼
                     Squad HTML Pages
@@ -114,7 +129,7 @@ No Selenium, browser automation, or web rendering is involved — all data is co
              list)               per bookmaker)
                            │
                            ▼
-                Data Aggregation Layer
+                 Data Aggregation Layer
                            │
                            ▼
                     Domain Data Models
